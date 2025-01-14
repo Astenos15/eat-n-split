@@ -1,0 +1,146 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 9.6rem;
+  font-family: sans-serif;
+}
+h3 {
+  font-size: 2.4rem;
+  margin-bottom: 4rem;
+}
+.green {
+  color: teal;
+}
+.red {
+  color: orangered;
+}
+.selected {
+  background-color: #f5f5dc;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-2-cols {
+  grid-template-columns: 40fr 60fr;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  align-self: flex-end;
+  padding: 0.5rem 4rem;
+  border: none;
+  border-radius: 2px;
+  background-color: teal;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
+
+  margin-bottom: 6rem;
+}
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.list-desc {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.list-desc-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.list-info {
+  font-size: 1.2rem;
+}
+.list-item img {
+  border-radius: 100px;
+}
+.list-label {
+  display: inline-block;
+  font-size: 1.6rem;
+}
+
+.form-add-friend {
+  padding: 2rem;
+  background-color: #f5f5dc;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.form-add-friend .form-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-add-friend .form-group label {
+  font-size: 1.6rem;
+}
+
+.form-split-bill {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.form-split-bill .form-group {
+  max-width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-split-bill .form-group label {
+  font-size: 1.6rem;
+}
+
+@media only screen and (max-width: 75em) {
+  .grid-2-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-split-bill .form-group {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .grid-2-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 37.6em) {
+  body {
+    padding: 9.6rem 2rem;
+  }
+}
